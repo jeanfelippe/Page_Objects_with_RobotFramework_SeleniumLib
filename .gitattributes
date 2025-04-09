@@ -1,1 +1,8 @@
 *.html linguist-detectable=false
+*.python linguist-detectable=true
+*.robot linguist-detectable=true
+*.html linguist-vendored=false
+*.html linguist-vendored
+*.html linguist-generated
+*.html linguist-documentation
+*.html linguist-detectable=false
