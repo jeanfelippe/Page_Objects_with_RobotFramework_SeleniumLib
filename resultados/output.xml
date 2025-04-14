@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.12.3 on win32)" generated="2025-04-14T17:51:48.425322" rpa="false" schemaversion="5">
+<suite id="s1" name="Amazon Tests" source="C:\Users\Jean\Robot_SeleniumLibrary\amazon_tests.robot">
+<test id="s1-t1" name="Caso de Teste 01 - Acesso ao menu &quot;Eletrônicos&quot;" line="9">
+<kw name="Abrir o navegador" owner="amazon_resources" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-14T17:51:48.911983" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<msg time="2025-04-14T17:51:51.966389" level="WARN">The chromedriver version (134.0.6998.166) detected in PATH at C:\Users\Jean\AppData\Local\Programs\Python\Python312\Scripts\chromedriver.exe might not be compatible with the detected chrome version (135.0.7049.85); currently, chromedriver 135.0.7049.84 is recommended for chrome 135.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>browser=chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-14T17:51:48.910968" elapsed="5.135543"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-04-14T17:51:54.046511" elapsed="0.031519"/>
+</kw>
+<status status="PASS" start="2025-04-14T17:51:48.909932" elapsed="5.168098"/>
+</kw>
+<kw name="Dado que estou na home page da Amazon.com.br" owner="amazon_resources">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-04-14T17:51:54.080028" level="INFO">Opening url 'https://www.amazon.com.br/'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-04-14T17:51:54.079028" elapsed="1.617473"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-14T17:52:10.698604" level="INFO">Slept 15 seconds.</msg>
+<arg>15s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-14T17:51:55.697500" elapsed="15.001104"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${MENU_ELETRONICOS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-14T17:52:10.699548" elapsed="0.146401"/>
+</kw>
+<status status="PASS" start="2025-04-14T17:51:54.079028" elapsed="16.766921"/>
+</kw>
+<kw name="Quando acessar o menu &quot;Eletrônicos&quot;" owner="amazon_resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-14T17:52:10.846952" level="INFO">Clicking element 'xpath=//*[@id="nav-xshop"]/ul/li[8]/div/a'.</msg>
+<arg>${MENU_ELETRONICOS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-14T17:52:10.846952" elapsed="0.835967"/>
+</kw>
+<status status="PASS" start="2025-04-14T17:52:10.845949" elapsed="0.837969"/>
+</kw>
+<kw name="E o texto &quot;Eletrônicos e Tecnologia&quot; deve ser exibido na página" owner="amazon_resources">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<msg time="2025-04-14T17:52:16.943604" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-04-14T17:52:16.944591" level="FAIL">Text 'Eletrônicos e Tecnologia' did not appear in 5 seconds.</msg>
+<arg>text=Eletrônicos e Tecnologia</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="FAIL" start="2025-04-14T17:52:11.684918" elapsed="5.307003">Text 'Eletrônicos e Tecnologia' did not appear in 5 seconds.</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${HEADER_ELETRONICOS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-04-14T17:52:16.991921" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-04-14T17:52:11.683918" elapsed="5.308003">Text 'Eletrônicos e Tecnologia' did not appear in 5 seconds.</status>
+</kw>
+<kw name="Então o título da página deve ficar &quot;Eletrônicos e Tecnologia | Amazon.com.br&quot;" owner="amazon_resources" source_name="Então o título da página deve ficar &quot;${TITULO}&quot;">
+<status status="NOT RUN" start="2025-04-14T17:52:16.992940" elapsed="0.000000"/>
+</kw>
+<kw name="E a categoria &quot;Computadores e Informática&quot; deve ser exibida na página" owner="amazon_resources">
+<status status="NOT RUN" start="2025-04-14T17:52:16.992940" elapsed="0.000000"/>
+</kw>
+<kw name="Fechar o navegador" owner="amazon_resources" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-04-14T17:52:17.132339" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-04-14T17:52:16.993922" elapsed="0.139416"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-14T17:52:17.133338" elapsed="2.292356"/>
+</kw>
+<status status="PASS" start="2025-04-14T17:52:16.992940" elapsed="2.433703"/>
+</kw>
+<doc>Verifica o menu eletronicos</doc>
+<tag>menus categorias</tag>
+<status status="FAIL" start="2025-04-14T17:51:48.908932" elapsed="30.517711">Text 'Eletrônicos e Tecnologia' did not appear in 5 seconds.</status>
+</test>
+<test id="s1-t2" name="Caso de Teste 02 - Pesquisa de um Produto" line="18">
+<kw name="Abrir o navegador" owner="amazon_resources" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-14T17:52:19.434663" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<msg time="2025-04-14T17:52:19.696607" level="WARN">The chromedriver version (134.0.6998.166) detected in PATH at C:\Users\Jean\AppData\Local\Programs\Python\Python312\Scripts\chromedriver.exe might not be compatible with the detected chrome version (135.0.7049.85); currently, chromedriver 135.0.7049.84 is recommended for chrome 135.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>browser=chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-14T17:52:19.433664" elapsed="1.557885"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-04-14T17:52:20.991549" elapsed="0.035979"/>
+</kw>
+<status status="PASS" start="2025-04-14T17:52:19.432665" elapsed="1.595863"/>
+</kw>
+<kw name="Dado que estou na home page da Amazon.com.br" owner="amazon_resources">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-04-14T17:52:21.028528" level="INFO">Opening url 'https://www.amazon.com.br/'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-04-14T17:52:21.028528" elapsed="1.638340"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-14T17:52:37.667068" level="INFO">Slept 15 seconds.</msg>
+<arg>15s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-14T17:52:22.666868" elapsed="15.000200"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${MENU_ELETRONICOS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-14T17:52:37.668109" elapsed="0.066066"/>
+</kw>
+<status status="PASS" start="2025-04-14T17:52:21.028528" elapsed="16.705647"/>
+</kw>
+<kw name="Quando pesquisar pelo produto &quot;Xbox Series S&quot;" owner="amazon_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-14T17:52:37.735173" level="INFO">Typing text 'Xbox Series S' into text field 'twotabsearchtextbox'.</msg>
+<arg>locator=twotabsearchtextbox</arg>
+<arg>text=Xbox Series S</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-14T17:52:37.735173" elapsed="0.158485"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-14T17:52:37.894667" level="INFO">Clicking element 'xpath=//*[@id="nav-search-submit-button"]'.</msg>
+<arg>xpath=//*[@id="nav-search-submit-button"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-14T17:52:37.893658" elapsed="3.191334"/>
+</kw>
+<status status="PASS" start="2025-04-14T17:52:37.735173" elapsed="3.349819"/>
+</kw>
+<kw name="Entao o título da pagina deve ficar &quot;Amazon.com.br : Xbox Series S&quot;" owner="amazon_resources">
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-04-14T17:52:41.093987" level="INFO">Page title is 'Amazon.com.br : Xbox Series S'.</msg>
+<arg>title=Amazon.com.br : Xbox Series S</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-04-14T17:52:41.086991" elapsed="0.006996"/>
+</kw>
+<status status="PASS" start="2025-04-14T17:52:41.086991" elapsed="0.008006"/>
+</kw>
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" owner="amazon_resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//span[normalize-space()='Console Xbox Series S']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-14T17:52:41.094997" elapsed="0.037854"/>
+</kw>
+<status status="PASS" start="2025-04-14T17:52:41.094997" elapsed="0.038854"/>
+</kw>
+<kw name="Fechar o navegador" owner="amazon_resources" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-04-14T17:52:41.293756" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-04-14T17:52:41.133851" elapsed="0.160911"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-14T17:52:41.294762" elapsed="2.313256"/>
+</kw>
+<status status="PASS" start="2025-04-14T17:52:41.133851" elapsed="2.475110"/>
+</kw>
+<doc>Pesquisa de produto</doc>
+<tag>busca_produtos</tag>
+<tag>lista_busca</tag>
+<status status="PASS" start="2025-04-14T17:52:19.430666" elapsed="24.178754"/>
+</test>
+<doc>Suite de teste para Amazon</doc>
+<status status="FAIL" start="2025-04-14T17:51:48.427321" elapsed="55.185119"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">busca_produtos</stat>
+<stat pass="1" fail="0" skip="0">lista_busca</stat>
+<stat pass="0" fail="1" skip="0">menus categorias</stat>
+</tag>
+<suite>
+<stat name="Amazon Tests" id="s1" pass="1" fail="1" skip="0">Amazon Tests</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-04-14T17:51:51.966389" level="WARN">The chromedriver version (134.0.6998.166) detected in PATH at C:\Users\Jean\AppData\Local\Programs\Python\Python312\Scripts\chromedriver.exe might not be compatible with the detected chrome version (135.0.7049.85); currently, chromedriver 135.0.7049.84 is recommended for chrome 135.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2025-04-14T17:52:19.696607" level="WARN">The chromedriver version (134.0.6998.166) detected in PATH at C:\Users\Jean\AppData\Local\Programs\Python\Python312\Scripts\chromedriver.exe might not be compatible with the detected chrome version (135.0.7049.85); currently, chromedriver 135.0.7049.84 is recommended for chrome 135.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>
