@@ -4,7 +4,7 @@ Library     SeleniumLibrary
 
 *** Variables ***
 ${URL}                         https://www.amazon.com.br/
-${MENU_ELETRONICOS}            xpath=//*[@id="nav-xshop"]/ul/li[8]/div/a
+${MENU_COMPUTADORES}            xpath=//*[@id="nav-xshop"]/ul/li[8]/div/a
 ${TEXTO_HEADER_ELETRONICOS}    text=Eletrônicos e Tecnologia
 ${HEADER_ELETRONICOS}          xpath=//span[contains(text(),'Eletrônicos e Tecnologia')][1]    
 
@@ -24,13 +24,13 @@ Fechar o navegador
 
 Dado que estou na home page da Amazon.com.br
     Go To                            ${URL}
-    Sleep    15s 
+    Sleep    10s 
     #Wait Until Element Is Visible    xpath=//*[@id="nav-xshop"]/ul/li[5]/div/a
-    Wait Until Element Is Visible    ${MENU_ELETRONICOS}
+    Wait Until Element Is Visible     ${MENU_COMPUTADORES}
     
 
-Quando acessar o menu "Eletrônicos"
-    Click Element    ${MENU_ELETRONICOS}
+Quando acessar o menu "Computadores"
+    Click Element    ${MENU_COMPUTADORES}
 
 
 E o texto "Eletrônicos e Tecnologia" deve ser exibido na página

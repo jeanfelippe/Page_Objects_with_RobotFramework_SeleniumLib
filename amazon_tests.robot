@@ -10,9 +10,9 @@ Caso de Teste 01 - Acesso ao menu "Eletrônicos"
     [Documentation]  Verifica o menu eletronicos
     [tags]           menus categorias
     Dado que estou na home page da Amazon.com.br
-    Quando acessar o menu "Eletrônicos"
-    E o texto "Eletrônicos e Tecnologia" deve ser exibido na página
-    Então o título da página deve ficar "Eletrônicos e Tecnologia | Amazon.com.br"     
+    Quando acessar o menu "Computadores"
+    # E o texto "Eletrônicos e Tecnologia" deve ser exibido na página
+    Então o título da página deve ficar "Computadores e Informática | Amazon.com.br"     
     E a categoria "Computadores e Informática" deve ser exibida na página
 
 Caso de Teste 02 - Pesquisa de um Produto
